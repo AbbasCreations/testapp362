@@ -206,6 +206,8 @@ export const ProductThumbnail = (currentproducts, loading) => {
         </>
       ) : (
         currentproducts.map((product, index) => {
+          product.SALES_PRICE = 0;
+          
           return (
             <div className="col-ag-3 col-md-4 col-sm-6 col-6 mb-4">
               <div className="productListing text-center">
