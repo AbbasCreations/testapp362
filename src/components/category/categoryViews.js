@@ -142,7 +142,7 @@ export const productsSortSection = (property, dispatch) => {
 
 const RefineSearch = (e, setSearchText) => {
   e.preventDefault();
-  let text = "^" + e.target.value;
+  let text = e.target.value;
   setSearchText(text);
 };
 
