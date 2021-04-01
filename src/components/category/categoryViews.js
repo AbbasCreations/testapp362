@@ -161,7 +161,7 @@ document.addEventListener("click", function (e) {
 }
 
 
-autocomplete(document.getElementById("myInput"), products);
+autocomplete(document.getElementById("myInput"), setSearchText);
 
 
 export const productsSortSection = (property, dispatch) => {
