@@ -515,7 +515,7 @@ header {
 
 /************************************ The middle area containing logo , search bar , login and cart  **************************************/
 #middle {
-  background: #000 !important;
+  background: #ffff !important;
   height: 65px;
 }
 #middle input {
@@ -523,6 +523,7 @@ header {
   color: #333 !important;
   max-width: 560px;
   height: 33px;
+  border:1px solid #777!important;
 }
 #middle input::placeholder {
   color: #333 !important;
@@ -549,21 +550,22 @@ header {
 }
 #middle .logo a img {
   max-width: 185px;
+  filter:invert(1);
 }
 #middle .profile a {
   font-family: "Montserrat-Medium";
   font-size: 12px;
   margin-left: 15px;
-  color:#000;
+  color:#000!important;
 }
 #middle .profile a i {
   font-size: 20px;
-  color:#000;
+  color:#000!important;
 }
 #middle .profile a:last-of-type {
   font-family: "Montserrat-SemiBold";
   text-transform: uppercase;
-  color:#000;
+  color:#000!important;
 }
 #middle .profile a:last-of-type span {
   font-size: 12px;
