@@ -490,7 +490,7 @@ section#contentHolder {
 
 /*************************************Header**************************************/
 header {
-  background: #000 !important;
+  background: #fff !important;
   padding: 0;
   position: absolute;
   top: 0;
@@ -501,14 +501,14 @@ header {
 
 #top {
   overflow: hidden;
-  background: #000 !important;
+  background: #fff !important;
   height: 32px;
   max-width: 1920px;
 }
 #top .one p {
   display: block;
   font-family: "Montserrat-Regular";
-  color: #fff;
+  color: #000;
   font-size: 13px;
 }
 /************************************ The top area where a message or call us is displayed **************************************/
@@ -520,12 +520,12 @@ header {
 }
 #middle input {
   font-size: 16px;
-  color: #888 !important;
+  color: #333 !important;
   max-width: 560px;
   height: 33px;
 }
 #middle input::placeholder {
-  color: #888 !important;
+  color: #333 !important;
   font-family: "Montserrat-Medium";
   font-size: 16px;
 }
@@ -554,13 +554,16 @@ header {
   font-family: "Montserrat-Medium";
   font-size: 12px;
   margin-left: 15px;
+  color:#000;
 }
 #middle .profile a i {
   font-size: 20px;
+  color:#000;
 }
 #middle .profile a:last-of-type {
   font-family: "Montserrat-SemiBold";
   text-transform: uppercase;
+  color:#000;
 }
 #middle .profile a:last-of-type span {
   font-size: 12px;
@@ -573,7 +576,7 @@ header {
 /************************************ The navigation and the dropdown menu **************************************/
 header nav {
   height: 46px;
-  background-color: #222222 !important;
+  background-color:royalblue !important;
 }
 header nav .container {
   max-width: 100%;
