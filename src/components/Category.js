@@ -86,6 +86,9 @@ export default function Category() {
     );
     */
   }, [url]);
+  useEffect(() => {
+    setLoading(true);
+  }, [checkAvailability]);
 
   temProducts = cC.getProducts(
     filters,
@@ -96,6 +99,7 @@ export default function Category() {
     urlData.taxonomy,
     urlData.category
   );
+
   if (checkAvailability == "out-of-stock-items") {
     temProducts = temProducts.filter(
       (prods) => prods.available == "Out of Stock"
@@ -105,6 +109,12 @@ export default function Category() {
   } else {
     temProducts = temProducts;
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [checkAvailability]);
 
   let props = { filters: {} };
   props.filters = filters;
@@ -149,6 +159,7 @@ export default function Category() {
                 products={temProducts}
                 property={property}
                 loading={loading}
+                setLoading={setLoading}
               />
             </div>
           </div>
@@ -182,12 +193,22 @@ const CategoryProductArea = (props) => {
   //PRODUCTS PER PAGE
   let productsPerPage = perpageProductscount;
 
+  useEffect(() => {
+    props.setLoading(true);
+  }, [searchText]);
+
   if (searchText != "") {
     const regex = new RegExp(searchText, "i");
     products = products.filter(
       (product) => regex.test(product.NAME) || regex.test(product.BRAND)
     );
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      props.setLoading(false);
+    }, 1000);
+  }, [searchText]);
 
   //GET PRODUCTS ACCORDING TO PAGINATION
   let currentproducts = cC.pagination(products, productsPerPage, activePage)
