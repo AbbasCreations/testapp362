@@ -142,7 +142,7 @@ export const productsSortSection = (property, dispatch) => {
 
 const RefineSearch = (e, setSearchText) => {
   e.preventDefault();
-  let text = e.target.value;
+  let text = "^" + e.target.value;
   setSearchText(text);
 };
 
@@ -204,10 +204,9 @@ export const ProductThumbnail = (currentproducts, loading) => {
             </div>
           </div>
         </>
-      ) : (
+      ) : currentproducts.length > 0 ? (
         currentproducts.map((product, index) => {
           product.SALES_PRICE = 0;
-          
           return (
             <div className="col-ag-3 col-md-4 col-sm-6 col-6 mb-4">
               <div className="productListing text-center">
@@ -293,6 +292,8 @@ export const ProductThumbnail = (currentproducts, loading) => {
             </div>
           );
         })
+      ) : (
+        <h3>No Products Avaiable</h3>
       )}
     </>
   );
