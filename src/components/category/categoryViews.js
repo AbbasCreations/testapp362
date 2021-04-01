@@ -44,7 +44,7 @@ export const productsSearchSection = (setSearchText) => {
   return (
     <>
     <form autocomplete="off" action="">
-    <div class="autocomplete">
+    <div class="autocomplete w-100">
       <input
         id="myInput"
         type="text"
